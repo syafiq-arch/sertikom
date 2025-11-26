@@ -5,33 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .container {
-            position: relative;
-            width: 100px;
-            border-radius: 30px;
-        }
-        .gambar {
-            width: 100%;
-            border-radius: 40px;
-        }
+        .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
-        .gradient {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 75%;
-            height: 100%;
-            background: linear-gradient(to right ,transparent,#fff);
-        }
+.image {
+    width:30%;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #0C084C;
+    position: relative;
+    cursor: pointer;
+}
 
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.image:hover img {
+    transform: scale(1.15);
+}
+
+.image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.image:hover::before {
+    opacity: 1;
+}
+
+.image::after {
+    content: attr(data-text);  /* INI YANG PENTING - ambil dari data-text */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.image:hover::after {
+    opacity: 1;
+}
+
+        
+        
     </style>
 </head>
 <body>
-    <div class="container">
-        <img class="gambar" src="Assets/Img/spacejoy-c0JoR_-2x3E-unsplash.jpg">
-        <div class="gradient">
-
-        </div>
+      <div class="gallery">
+   
+    <div class="image Graphic-Design" data-text="Graphic Design">
+        <img src="https://smkpesat.sch.id/wp-content/uploads/2025/07/Porto-DKV-Artboard-1-copy-4.png">
     </div>
+   
+    <div class="image Photography" data-text="Photography">
+        <img src="https://smkpesat.sch.id/wp-content/uploads/2025/07/Porto-DKV-Artboard-1.png">
+    </div>
+   
+    <div class="image Photography" data-text="Photography">
+        <img src="https://smkpesat.sch.id/wp-content/uploads/2025/07/FotoArtboard-1-copy-12.png">
+    </div>
+   
+    <div class="image Design-3D" data-text="3D Design">
+        <img src="https://smkpesat.sch.id/wp-content/uploads/2025/07/Porto-DKV-Artboard-1-copy-9.png">
+    </div>
+   
+    <div class="image Design-3D" data-text="3D Design">
+        <img src="https://smkpesat.sch.id/wp-content/uploads/2025/07/Porto-DKV-Artboard-1-copy-10.png">
+    </div>
+   
+    <div class="image Graphic-Design" data-text="Graphic Design">
+        <img src="https://smkpesat.sch.id/wp-content/uploads/2025/07/Porto-DKV-Artboard-1-copy-8.png">
+    </div>
+   
+</div>
+   
+</div>
+</div>
+          <!-- portofolio end -->
 </body>
 </html>
