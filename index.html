@@ -22,26 +22,78 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact Us</a></li>
-                <li><a href="#news">News</a></li>
             </ul>
         </nav>
         <div class="header-right">
-            <div class="lang-selector">
-                <div class="flag"></div>
-                <span>ID</span>
-                <span>▼</span>
-            </div>
+            <select id="country" name="country" class="country-selector">
+                <option value="none">Select Country</option>
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+                <option value="indonesia" selected>Indonesia</option>
+                <option value="ukraine">Ukraine</option>
+                <option value="poland">Poland</option>
+                <option value="french">French</option>
+                <option value="spain">Spain</option>
+                <option value="netherlands">Netherlands</option>
+                <option value="greece">Greece</option>
+                <option value="russian">Russian</option>
+                <option value="monaco">Monaco</option>
+                <option value="yunani">Yunani</option>
+                <option value="slovakia">Slovakia</option>
+                <option value="egypt">Egypt</option>
+                <option value="serbia">Serbia</option>
+                <option value="hawai">Hawai</option>
+                <option value="iraq">Iraq</option>
+                <option value="iceland">Iceland</option>
+                <option value="irlandia">Irlandia</option>
+                <option value="japan">Japan</option>
+                <option value="china">China</option>
+                <option value="south-korea">South Korea</option>
+                <option value="zimbabwe">Zimbabwe</option>
+                <option value="bahrain">Bahrain</option>
+                <option value="bangladesh">Bangladesh</option>
+                <option value="slovenia">Slovenia</option>
+                <option value="cameroon">Cameroon</option>
+                <option value="new-zealand">New Zealand</option>
+                <option value="papua">Papua New Guinea</option>
+                <option value="bulgaria">Bulgaria</option>
+                <option value="botswana">Botswana</option>
+                <option value="belgium">Belgium</option>
+                <option value="peru">Peru</option>
+                <option value="cyprus">Cyprus</option>
+                <option value="ecuador">Ecuador</option>
+                <option value="denmark">Denmark</option>
+                <option value="sweden">Sweden</option>
+                <option value="finland">Finland</option>
+                <option value="switzerland">Switzerland</option>
+                <option value="germany">Germany</option>
+                <option value="georgia">Georgia</option>
+                <option value="liberia">Liberia</option>
+                <option value="kuwait">Kuwait</option>
+                <option value="korea">Korea</option>
+                <option value="jordan">Jordan</option>
+                <option value="romania">Romania</option>
+                <option value="uae">United Arab Emirates</option>
+                <option value="uruguay">Uruguay</option>
+                <option value="uzbekistan">Uzbekistan</option>
+                <option value="uganda">Uganda</option>
+                <option value="fiji">Fiji</option>
+                <option value="saint-lucia">Saint Lucia</option>
+                <option value="san-marino">San Marino</option>
+                <option value="saudi-arabia">Saudi Arabia</option>
+            </select>
         </div>
     </header>
     <!-- header end -->
     
-    <div class="banner" id="home">
+    <div class="banner">
         <span>Discover Our Latest Technology Insights & Innovation Solutions!</span>
-        <!-- <button class="visit-btn">Visit Our News!</button> -->
+        <a href="#news" class="visit-btn">Visit Our News!</a>
     </div>
     
     <!-- Hero Swiper -->
-    <section class="hero-section"">
+    <section class="hero-section" id="home">
         <div class="swiper heroSwiper">
             <div class="swiper-wrapper">
                 <!-- Slide 1 -->
@@ -143,10 +195,10 @@
     <!-- end about -->
 
     <!-- Layanan -->
-    <div class="layanan" id="Service">
-        <div class="layanan-container" id="services">
+    <div class="layanan" id="services">
+        <div class="layanan-container">
             <div class="layanan-header">
-                <h1>Layanan Konsultasi<br>Teknologi Kami</h1>
+                <h1>Services<br>About our Technology</h1>
                 <hr>
             </div>
 
@@ -195,7 +247,7 @@
             <div class="news-grid">
 
                 <!-- News pertama -->
-                <div class="news-card" >
+                <div class="news-card">
                     <div class="news-image">
                         <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&q=80" alt="AI Implementation">
                     </div>
@@ -294,6 +346,115 @@
         
     </section>
 
+
+    <!-- form -->
+       <section class="news-section" id="contact">
+        <div class="news-container">
+            <div class="news-header">
+                <h1>Contact Us</h1>
+             </div>
+        <div class="form-header"></div>
+        <form id="contactForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="firstName"> Full Name <span class="required"></span></label>
+                    <input type="text" id="firstName" name="firstName" placeholder="syafiq alfarisi">
+                    <span class="error-message" id="firstNameError"></span>
+                </div>
+         </div>
+
+            <!-- email -->
+        <div class="form-row">   
+            <div class="form-group">
+                <label for="email">Email Address <span class="required"></span></label>
+                <input type="email" id="email" name="email" placeholder="syafiqalfarisi.30@gmail.com">
+                <span class="error-message" id="emailError"></span>
+            </div>
+         </div> 
+            <!-- nomor telp -->
+         <div class="form-row">        
+            <div class="form-group">
+                <label for="phone">Phone Number <span class="required"></span></label>
+                <input type="tel" id="phone" name="phone" placeholder="+62 000 000 000">
+                <span class="error-message" id="phoneError"></span>
+            </div>
+        </div>
+
+             <!-- tolongan -->
+         <div class="form-row">      
+            <div class="form-group">
+                <label for="service">How can we help? <span class="required"></span></label>
+                <select id="service" name="service">
+                    <option value="">Select a service</option>
+                    <option value="digital-transformation">Digital Transformation</option>
+                    <option value="cloud-solutions">Cloud Solutions</option>
+                    <option value="cybersecurity">Cybersecurity Consulting</option>
+                    <option value="ai-ml">AI & Machine Learning</option>
+                    <option value="data-analytics">Data Analytics</option>
+                    <option value="it-strategy">IT Strategy Consulting</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+         </div>
+         <div class="form-row">   
+            <div class="form-group">
+                <label for="message">Message <span class="required"></span></label>
+                <textarea id="message" name="message" placeholder="Tell us about your project or inquiry..."></textarea>
+                <span class="error-message" id="messageError"></span>
+            </div>
+        </div>
+            <button type="submit" class="submit-btn">Submit </button>
+ 
+        </form>
+    </div>
+
+    
+
+    <!-- footer -->
+     <div class="footer">
+  <div class="container">
+    <div class="row">
+
+      <!-- Kolom 1 -->
+      <div class="col">
+        <h3 class="foot">Miles Stone</h3>
+        <p>
+          We are a technology consulting service provider that focuses on developing digital solutions, automation and IT strategies to support your business efficiency and growth.
+        </p>
+      </div>
+
+      <!-- Kolom 2 -->
+      <div class="col">
+        <h5>Menu</h5>
+        <ul>
+          <li><a href="#HOME">Home</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="#Project">Projects</a></li>
+          <li><a href="#Service">Services</a></li>
+          <li><a href="#FAQ">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <h5>Contact</h5>
+        <ul>
+          <li>MilesStone@gmail.com</li>
+          <li>+62 030 015 010 </li>
+          <li>@MilesStoneID(Telegram)</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <div class="copyright">
+      <p>© Copyright 2025 by Miles Stone Company. All Right Reserved.</p>
+    </div>
+  </div>
+</div>
+
+    
     <script src="https://unpkg.com/@studio-freight/lenis/dist/lenis.min.js"></script>
 
 </body>
