@@ -7,85 +7,45 @@
     <link rel="stylesheet" href="Dist/CSS/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
 </head>
-<body>
+<body class="pipit">
 
     <!-- header -->
-    <header class="navbar">
-        <div class="logo">
-            <img src="Assets/Img/7dc3c2d1-7295-4c1b-bb40-fc658cbb2162.png" alt="Miles Stone Logo" class="logo-image" width="100px">
-        </div>
-        
-        <nav>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
+    <header>
+        <div class="navbar">
+            <a href="#" class="logo">
+                <i class="fas fa-globe"></i>
+                <span>Visual Digital</span>
+            </a>
+            
+            <!-- Desktop Navigasi -->
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#paket">Package</a></li>
+                <li><a href="#contact">Contact us</a></li>
             </ul>
-        </nav>
-        <div class="header-right">
-            <select id="country" name="country" class="country-selector">
-                <option value="none">Select Country</option>
-                <option value="australia">Australia</option>
-                <option value="canada">Canada</option>
-                <option value="usa">USA</option>
-                <option value="indonesia" selected>Indonesia</option>
-                <option value="ukraine">Ukraine</option>
-                <option value="poland">Poland</option>
-                <option value="french">French</option>
-                <option value="spain">Spain</option>
-                <option value="netherlands">Netherlands</option>
-                <option value="greece">Greece</option>
-                <option value="russian">Russian</option>
-                <option value="monaco">Monaco</option>
-                <option value="yunani">Yunani</option>
-                <option value="slovakia">Slovakia</option>
-                <option value="egypt">Egypt</option>
-                <option value="serbia">Serbia</option>
-                <option value="hawai">Hawai</option>
-                <option value="iraq">Iraq</option>
-                <option value="iceland">Iceland</option>
-                <option value="irlandia">Irlandia</option>
-                <option value="japan">Japan</option>
-                <option value="china">China</option>
-                <option value="south-korea">South Korea</option>
-                <option value="zimbabwe">Zimbabwe</option>
-                <option value="bahrain">Bahrain</option>
-                <option value="bangladesh">Bangladesh</option>
-                <option value="slovenia">Slovenia</option>
-                <option value="cameroon">Cameroon</option>
-                <option value="new-zealand">New Zealand</option>
-                <option value="papua">Papua New Guinea</option>
-                <option value="bulgaria">Bulgaria</option>
-                <option value="botswana">Botswana</option>
-                <option value="belgium">Belgium</option>
-                <option value="peru">Peru</option>
-                <option value="cyprus">Cyprus</option>
-                <option value="ecuador">Ecuador</option>
-                <option value="denmark">Denmark</option>
-                <option value="sweden">Sweden</option>
-                <option value="finland">Finland</option>
-                <option value="switzerland">Switzerland</option>
-                <option value="germany">Germany</option>
-                <option value="georgia">Georgia</option>
-                <option value="liberia">Liberia</option>
-                <option value="kuwait">Kuwait</option>
-                <option value="korea">Korea</option>
-                <option value="jordan">Jordan</option>
-                <option value="romania">Romania</option>
-                <option value="uae">United Arab Emirates</option>
-                <option value="uruguay">Uruguay</option>
-                <option value="uzbekistan">Uzbekistan</option>
-                <option value="uganda">Uganda</option>
-                <option value="fiji">Fiji</option>
-                <option value="saint-lucia">Saint Lucia</option>
-                <option value="san-marino">San Marino</option>
-                <option value="saudi-arabia">Saudi Arabia</option>
-            </select>
+            
+            <!-- Mobile Menu Togglenyq -->
+            <button class="menu-toggle" id="mobile-menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </div>
+        
+        <!-- Mobile Dropdown Menufg -->
+        <ul class="mobile-menu" id="mobile-menu">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+             <li><a href="#news">News</a></li>
+            <li><a href="#paket">Package</a></li>
+        </ul>
     </header>
-    <!-- header end -->
     
     <div class="banner">
         <span>Discover Our Latest Technology Insights & Innovation Solutions!</span>
@@ -98,7 +58,7 @@
             <div class="swiper-wrapper">
                 <!-- Slide 1 -->
                 <div class="swiper-slide">
-                    <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80');">
+                    <div class="hero-slide" style="background-image: url('Assets/Img/premium_photo-1661347828110-435a158faa8e.avif');">
                         <div class="hero-overlay"></div>
                         <div class="hero-content">
                             <div class="hero-text">
@@ -139,11 +99,11 @@
                 </div>
             </div>
             
-            <!-- Navigation -->
+            <!-- Navigasi -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
             
-            <!-- Pagination -->
+            <!-- Paginasi -->
             <div class="swiper-pagination"></div>
         </div>
     </section>
@@ -172,6 +132,7 @@
         });
     </script>
 
+
     <!-- about -->
     <section class="services-section" id="about">
         <div class="services-container">
@@ -191,8 +152,11 @@
                 <button class="services-btn">Learn More</button>
             </div>
         </div>
+        
     </section>
     <!-- end about -->
+
+    
 
     <!-- Layanan -->
     <div class="layanan" id="services">
@@ -237,7 +201,7 @@
     </div>
     <!-- End Layanan -->
 
-    <!-- News Section -->
+    <!-- News -->
     <section class="news-section" id="news">
         <div class="news-container">
             <div class="news-header">
@@ -346,6 +310,92 @@
         
     </section>
 
+  <!-- Plan -->
+     <section class="pricing-section" id="paket">
+        <div class="section-header">
+            <p class="section-subtitle">Paket Layanan Website</p>
+            <h1 class="section-title">Solusi Lengkap untuk Website Bisnis Anda</h1>
+            <p class="section-description">
+                Pilih paket yang sesuai dengan kebutuhan website Anda. Setiap paket mencakup hosting, dukungan teknis, dan jaminan kepuasan 100%.
+            </p>
+        </div>
+        
+        <!-- kartu -->
+        <div class="container-card">
+            <!-- Paket Basic -->
+            <div class="service-card">
+                <div class="plan-name">Basic</div>
+                <div class="price-wrapper">
+                    <div class="price">
+                        <span class="currency">Rp</span>500<span style="font-size: 28px;">K</span>
+                    </div>
+                    <div class="period">/bulan</div>
+                </div>
+                <ul class="features">
+                    <li><span class="check">✓</span> Desain Website Responsif</li>
+                    <li><span class="check">✓</span> 5 Halaman Konten</li>
+                    <li><span class="check">✓</span> SEO Basic</li>
+                    <li><span class="check">✓</span> Support Email</li>
+                    <li><span class="check">✓</span> Free Domain 1 Tahun</li>
+                    <li><span class="check">✓</span> SSL Certificate</li>
+                </ul>
+                <button class="cta-button">Pilih Paket</button>
+            </div>
+
+            <!-- Paket Professional -->
+            <div class="service-card featured">
+                <span class="badge">Popular</span>
+                <div class="plan-name">Professional</div>
+                <div class="price-wrapper">
+                    <div class="price">
+                        <span class="currency">Rp</span>1.5<span style="font-size: 28px;">Jt</span>
+                    </div>
+                    <div class="period">/bulan</div>
+                </div>
+                <ul class="features">
+                    <li><span class="check">✓</span> Desain Website Responsif</li>
+                    <li><span class="check">✓</span> 15 Halaman Konten</li>
+                    <li><span class="check">✓</span> SEO Advanced</li>
+                    <li><span class="check">✓</span> Mobile App Integration</li>
+                    <li><span class="check">✓</span> Google Analytics</li>
+                    <li><span class="check">✓</span> Priority Support 24/7</li>
+                    <li><span class="check">✓</span> 2x Revisi Gratis</li>
+                </ul>
+                <button class="cta-button">Pilih Paket</button>
+            </div>
+
+            <!-- Paket Enterprise -->
+            <div class="service-card">
+                <div class="plan-name">Enterprise</div>
+                <div class="price-wrapper">
+                    <div class="price">
+                        <span class="currency">Rp</span>3<span style="font-size: 28px;">Jt</span>
+                    </div>
+                    <div class="period">/bulan</div>
+                </div>
+                <ul class="features">
+                    <li><span class="check">✓</span> Desain Website Premium</li>
+                    <li><span class="check">✓</span> Unlimited Halaman</li>
+                    <li><span class="check">✓</span> SEO Expert + SEM</li>
+                    <li><span class="check">✓</span> Custom Development</li>
+                    <li><span class="check">✓</span> E-commerce Integration</li>
+                    <li><span class="check">✓</span> Database Management</li>
+                    <li><span class="check">✓</span> Dedicated Account Manager</li>
+                    <li><span class="check">✓</span> Unlimited Revisi</li>
+                    <li><span class="check">✓</span> Monthly Reports</li>
+                </ul>
+                <button class="cta-button">Pilih Paket</button>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 50px; color: var(--text-light); opacity: 0.7; font-size: 14px;">
+            <p>Semua paket termasuk maintenance bulanan dan backup data reguler.</p>
+            <p>Harga belum termasuk PPN. Kontrak minimal 12 bulan.</p>
+        </div>
+    </section>
+
+    
+
 
     <!-- form -->
        <section class="news-section" id="contact">
@@ -363,14 +413,15 @@
                 </div>
          </div>
 
-            <!-- email -->
+           <!-- email -->
         <div class="form-row">   
-            <div class="form-group">
-                <label for="email">Email Address <span class="required"></span></label>
-                <input type="email" id="email" name="email" placeholder="syafiqalfarisi.30@gmail.com">
-                <span class="error-message" id="emailError"></span>
-            </div>
-         </div> 
+          <div class="form-group">
+            <label for="email">Email Address <span class="required"></span></label>
+            <input type="text" id="email" name="email" placeholder="syafiqalfarisi.30@gmail.com">
+        <span class="error-message" id="emailError"></span>
+        </div>
+    </div>
+
             <!-- nomor telp -->
          <div class="form-row">        
             <div class="form-group">
@@ -443,11 +494,8 @@
           <li>@MilesStoneID(Telegram)</li>
         </ul>
       </div>
-
     </div>
-
     <hr>
-
     <div class="copyright">
       <p>© Copyright 2025 by Miles Stone Company. All Right Reserved.</p>
     </div>
@@ -456,6 +504,9 @@
 
     
     <script src="https://unpkg.com/@studio-freight/lenis/dist/lenis.min.js"></script>
-
+    <script src="Dist/JS/script.js"></script>
+    <script src="path/to/form-validation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
 </body>
 </html>
